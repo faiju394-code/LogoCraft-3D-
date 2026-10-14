@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { LogoConfig, MaterialFinish } from '../types/logo';
-import { EMBLEM_SHAPES } from '../constants/presets';
-
+import { EMBLEM_SHAPES } from '../presets';
 interface Canvas3DProps {
   config: LogoConfig;
   onRotationChange?: (rot: { x: number; y: number; z: number }) => void;
