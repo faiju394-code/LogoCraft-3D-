@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { LogoConfig, PresetTemplate } from './types/logo';
-import { DEFAULT_LOGO_CONFIG, PRESET_TEMPLATES, COLOR_PALETTES, FONTS, EMBLEM_SHAPES } from './constants/presets';
+import { DEFAULT_LOGO_CONFIG, PRESET_TEMPLATES, COLOR_PALETTES, FONTS, EMBLEM_SHAPES } from './presets';
 import { Canvas3D } from './components/Canvas3D';
 import { MobileFrame } from './components/MobileFrame';
 import { Toolbar, TabType } from './components/Toolbar';
