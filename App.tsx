@@ -4,7 +4,7 @@ import { DEFAULT_LOGO_CONFIG, PRESET_TEMPLATES, COLOR_PALETTES, FONTS, EMBLEM_SH
 import { Canvas3D } from './components/Canvas3D';
 import { MobileFrame } from './components/MobileFrame';
 import { Toolbar, TabType } from './components/Toolbar';
-import { TextPanel } from './components/panels/TextPanel';
+import { TextPanel } from './TextPanel';
 import { Effects3DPanel } from './components/panels/Effects3DPanel';
 import { EmblemPanel } from './components/panels/EmblemPanel';
 import { ColorsPanel } from './components/panels/ColorsPanel';
