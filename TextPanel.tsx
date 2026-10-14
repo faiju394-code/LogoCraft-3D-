@@ -3,7 +3,8 @@ import { LogoConfig } from '../../types/logo';
 import { FONTS } from './presets';
 import { Type, Sparkles, Sliders, Upload, Globe, Plus } from 'lucide-react';
 import { FontManagerModal } from './components/panels/FontManagerModal';
-  config: LogoConfig;
+interface TextPanelProps { 
+config: LogoConfig;
   onChange: (updater: (prev: LogoConfig) => LogoConfig) => void;
 }
 
