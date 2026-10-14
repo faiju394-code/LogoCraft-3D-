@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { LogoConfig } from '../../types/logo';
-import { FONTS } from '../../constants/presets';
-import { CustomFontItem, FONT_CATEGORIES, initializeCustomFonts, saveCustomFont, removeCustomFont, renameCustomFont } from '../../utils/fontManager';
+import { FONTS } from '../../presets';
+import { CustomFontItem, FONT_CATEGORIES, initializeCustomFonts, saveCustomFont, removeCustomFont, renameCustomFont } from '../../fontManager';
 import { Type, Plus, Search, Trash2, Edit2, Star, Check, AlertCircle, X, Sparkles } from 'lucide-react';
 
 interface FontManagerModalProps {
