@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { LogoConfig } from '../../types/logo';
-import { FONTS } from '../../constants/presets';
+import { FONTS } from './presets';
 import { Type, Sparkles, Sliders, Upload, Globe, Plus } from 'lucide-react';
 import { FontManagerModal } from './FontManagerModal';
 
