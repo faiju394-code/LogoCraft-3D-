@@ -1,16 +1,16 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
-import { LogoConfig, PresetTemplate } from './logo';
-import { DEFAULT_LOGO_CONFIG, PRESET_TEMPLATES, COLOR_PALETTES, FONTS, EMBLEM_SHAPES } from './presets';
-import { Canvas3D } from './Canvas3D';
-import { MobileFrame } from './MobileFrame';
-import { Toolbar, TabType } from './Toolbar';
-import { TextPanel } from './TextPanel';
-import { Effects3DPanel } from './Effects3DPanel';
-import { EmblemPanel } from './EmblemPanel';
-import { ColorsPanel } from './ColorsPanel';
-import { BackgroundPanel } from './BackgroundPanel';
-import { ExportModal } from './ExportModal';
-import { ReactNativeModal } from './ReactNativeModal';
+import { LogoConfig, PresetTemplate } from './types/logo';
+import { DEFAULT_LOGO_CONFIG, PRESET_TEMPLATES, COLOR_PALETTES, FONTS, EMBLEM_SHAPES } from './constants/presets';
+import { Canvas3D } from './components/Canvas3D';
+import { MobileFrame } from './components/MobileFrame';
+import { Toolbar, TabType } from './components/Toolbar';
+import { TextPanel } from './components/panels/TextPanel';
+import { Effects3DPanel } from './components/panels/Effects3DPanel';
+import { EmblemPanel } from './components/panels/EmblemPanel';
+import { ColorsPanel } from './components/panels/ColorsPanel';
+import { BackgroundPanel } from './components/panels/BackgroundPanel';
+import { ExportModal } from './components/panels/ExportModal';
+import { ReactNativeModal } from './components/panels/ReactNativeModal';
 import {
   Undo2,
   Redo2,
