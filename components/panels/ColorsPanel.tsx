@@ -1,8 +1,7 @@
 import React from 'react';
 import { LogoConfig, MaterialFinish } from '../../types/logo';
-import { COLOR_PALETTES } from '../../constants/presets';
+import { COLOR_PALETTES } from '../../presets';
 import { Palette, Sparkles, Gem, Disc } from 'lucide-react';
-
 interface ColorsPanelProps {
   config: LogoConfig;
   onChange: (updater: (prev: LogoConfig) => LogoConfig) => void;
