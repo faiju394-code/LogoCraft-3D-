@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
 import { LogoConfig } from '../../types/logo';
-import { EMBLEM_SHAPES } from '../../constants/presets';
-import { Shield, Upload, Image as ImageIcon, Trash2, CheckCircle2 } from 'lucide-react';
 
+import { Shield, Upload, Image as ImageIcon, Trash2, CheckCircle2 } from 'lucide-react';
+import { EMBLEM_SHAPES } from '../../presets';
 interface EmblemPanelProps {
   config: LogoConfig;
   onChange: (updater: (prev: LogoConfig) => LogoConfig) => void;
