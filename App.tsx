@@ -29,6 +29,25 @@ import {
 } from 'lucide-react';
 
 export default function App() {
+const photoInputRef = useRef<HTMLInputElement>(null);
+const videoInputRef = useRef<HTMLInputElement>(null);
+const [selectedMediaUrl, setSelectedMediaUrl] = useState<string | null>(null);
+const [selectedMediaType, setSelectedMediaType] = useState<'photo' | 'video' | null>(null);
+const handlePhotoSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const file = event.target.files?.[0];
+  if (!file) return;
+  if (selectedMediaUrl) URL.revokeObjectURL(selectedMediaUrl);
+  setSelectedMediaUrl(URL.createObjectURL(file));
+  setSelectedMediaType('photo');
+};
+
+const handleVideoSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const file = event.target.files?.[0];
+  if (!file) return;
+  if (selectedMediaUrl) URL.revokeObjectURL(selectedMediaUrl);
+  setSelectedMediaUrl(URL.createObjectURL(file));
+  setSelectedMediaType('video');
+};
   const [config, setConfig] = useState<LogoConfig>(() => {
     try {
       const saved = localStorage.getItem('logo_forge_config');
@@ -184,7 +203,35 @@ export default function App() {
             <Sparkles className="w-3.5 h-3.5 text-amber-400" />
             <span className="hidden sm:inline">Templates</span>
           </button>
+<input
+  ref={photoInputRef}
+  type="file"
+  accept="image/*"
+  hidden
+  onChange={handlePhotoSelect}
+/>
 
+<input
+  ref={videoInputRef}
+  type="file"
+  accept="video/*"
+  hidden
+  onChange={handleVideoSelect}
+/>
+
+<button
+  onClick={() => photoInputRef.current?.click()}
+  className="px-2 py-1.5 rounded-lg bg-slate-800 text-white text-xs"
+>
+  Photo Gallery
+</button>
+
+<button
+  onClick={() => videoInputRef.current?.click()}
+  className="px-2 py-1.5 rounded-lg bg-slate-800 text-white text-xs"
+>
+  Video Gallery
+</button>
           {/* Randomize Button */}
           <button
             onClick={handleRandomize}
