@@ -1,4 +1,4 @@
-import { FontOption, LogoConfig, PresetTemplate } from '../types/logo';
+import { FontOption, LogoConfig, PresetTemplate } from './logo';
 
 export const FONTS: FontOption[] = [
   { id: 'Syne', name: 'Syne (Geometric Modern)', category: 'Display', fallback: 'sans-serif' },
