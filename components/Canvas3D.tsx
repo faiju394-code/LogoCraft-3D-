@@ -2,12 +2,14 @@ import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { LogoConfig, MaterialFinish } from '../types/logo';
 import { EMBLEM_SHAPES } from '../presets';
 interface Canvas3DProps {
-  config: LogoConfig;
+  confimportig: LogoConfig;
+  mediaUrl?: string | null;
+  mediaType?: 'photo' | 'video' | null;
   onRotationChange?: (rot: { x: number; y: number; z: number }) => void;
   exportRef?: React.MutableRefObject<((scale?: number, transparent?: boolean) => Promise<string>) | null>;
 }
 
-export const Canvas3D: React.FC<Canvas3DProps> = ({ config, onRotationChange, exportRef }) => {
+export const Canvas3D: React.FC<Canvas3DProps> = ({ config, onRotationChange, exportRef, mediaUrl, mediaType }) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [isDragging, setIsDragging] = useState(false);
