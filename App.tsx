@@ -280,11 +280,13 @@ const handleVideoSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
       <div className="flex-1 flex flex-col md:flex-row overflow-hidden relative">
         {/* 3D Interactive Viewport */}
         <section className="relative flex-1 min-h-[300px] md:min-h-0 flex items-center justify-center p-3 bg-gradient-to-b from-slate-950 via-slate-900/50 to-slate-950 overflow-hidden border-b md:border-b-0 md:border-r border-slate-800/80">
-          <Canvas3D
-            config={config}
-            onRotationChange={handleCanvasRotation}
-            exportRef={exportRef}
-          />
+        <Canvas3D
+  config={config}
+  onRotationChange={handleCanvasRotation}
+  exportRef={exportRef}
+  mediaUrl={selectedMediaUrl}
+  mediaType={selectedMediaType}
+/>
 
           {/* Floating Canvas Quick Controls */}
           <div className="absolute top-3 right-3 flex flex-col gap-1.5 z-10">
