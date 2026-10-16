@@ -631,6 +631,22 @@ export const Canvas3D: React.FC<Canvas3DProps> = ({ config, onRotationChange, ex
       className="relative w-full h-full flex items-center justify-center select-none overflow-hidden"
     >
       <canvas
+        {mediaUrl && mediaType === 'photo' && (
+  <img
+    src={mediaUrl}
+    alt="Selected photo"
+    className="absolute inset-0 m-auto w-full max-w-[420px] aspect-square object-contain pointer-events-none"
+  />
+)}
+
+{mediaUrl && mediaType === 'video' && (
+  <video
+    src={mediaUrl}
+    controls
+    playsInline
+    className="absolute inset-0 m-auto w-full max-w-[420px] aspect-square object-contain"
+  />
+)}
         ref={canvasRef}
         width={512}
         height={512}
